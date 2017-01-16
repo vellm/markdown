@@ -6,5 +6,6 @@ markdown_backend:
     - AWS_SECRET_ACCESS_KEY
     - AWS_REGION
     - AWS_DEFAULT_REGION
+    - PORT
   ports:
     - "8080:8080"
