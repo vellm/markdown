@@ -3,14 +3,21 @@ package main
 import (
 	"os"
 
+	"github.com/iris-contrib/middleware/secure"
 	"github.com/kataras/iris"
 	"github.com/vellm/vellm/api"
 	"github.com/vellm/vellm/delivery"
 )
 
 func main() {
-	port := os.Getenv("PORT")
+	s := secure.New(secure.Options{
+		SSLRedirect: true,
+	})
+
+	iris.Use(s)
+
 	iris.Get("/:site", delivery.GetSite)
 	iris.Post("/api/v1/upload", api.UploadMarkdownFile)
-	iris.Listen(":" + port)
+
+	iris.Listen(":" + os.Getenv("PORT"))
 }
