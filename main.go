@@ -9,10 +9,13 @@ import (
 	"github.com/vellm/vellm/delivery"
 )
 
+var env = os.Getenv("ENV")
+
 func main() {
 	s := secure.New(secure.Options{
 		SSLRedirect:     true,
 		SSLProxyHeaders: map[string]string{"x-forwarded-proto": "https"},
+		IsDevelopment:   env == "development",
 	})
 
 	iris.Use(s)
