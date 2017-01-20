@@ -3,9 +3,9 @@ package main
 import (
 	"os"
 
-	"github.com/HenrikFricke/markdown/api"
-	"github.com/HenrikFricke/markdown/delivery"
 	"github.com/kataras/iris"
+	"github.com/vellm/vellm/api"
+	"github.com/vellm/vellm/delivery"
 )
 
 func main() {

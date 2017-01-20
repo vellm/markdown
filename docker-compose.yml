@@ -1,4 +1,4 @@
-markdown_backend:
+vellm:
   build: .
   dockerfile: Dockerfile
   environment:

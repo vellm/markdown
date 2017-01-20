@@ -1,8 +1,8 @@
 FROM golang:1.7.4-alpine
 
-ADD . /go/src/github.com/HenrikFricke/markdown
-RUN go install github.com/HenrikFricke/markdown
+ADD . /go/src/github.com/vellm/vellm
+RUN go install github.com/vellm/vellm
 
-ENTRYPOINT /go/bin/markdown
+ENTRYPOINT /go/bin/vellm
 
 EXPOSE 8080
