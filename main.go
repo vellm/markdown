@@ -11,7 +11,8 @@ import (
 
 func main() {
 	s := secure.New(secure.Options{
-		SSLRedirect: true,
+		SSLRedirect:     true,
+		SSLProxyHeaders: map[string]string{"x-forwarded-proto": "https"},
 	})
 
 	iris.Use(s)
