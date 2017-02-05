@@ -5,8 +5,8 @@ import (
 
 	"github.com/iris-contrib/middleware/secure"
 	"github.com/kataras/iris"
-	"github.com/vellm/vellm/api"
-	"github.com/vellm/vellm/delivery"
+	"github.com/vellm/vellm.io/api"
+	"github.com/vellm/vellm.io/delivery"
 )
 
 var env = os.Getenv("ENV")

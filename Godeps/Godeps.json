@@ -1,5 +1,5 @@
 {
-	"ImportPath": "github.com/vellm/vellm",
+	"ImportPath": "github.com/vellm/vellm.io",
 	"GoVersion": "go1.7",
 	"GodepVersion": "v75",
 	"Deps": [
@@ -387,16 +387,6 @@
 		{
 			"ImportPath": "golang.org/x/time/rate",
 			"Rev": "f51c12702a4d776e4c1fa9b0fabab841babae631"
-		},
-		{
-			"ImportPath": "gopkg.in/square/go-jose.v1/cipher",
-			"Comment": "v1.1.0",
-			"Rev": "aa2e30fdd1fe9dd3394119af66451ae790d50e0d"
-		},
-		{
-			"ImportPath": "gopkg.in/square/go-jose.v1/json",
-			"Comment": "v1.1.0",
-			"Rev": "aa2e30fdd1fe9dd3394119af66451ae790d50e0d"
 		}
 	]
 }
