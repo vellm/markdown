@@ -8,5 +8,7 @@ vellm:
     - AWS_DEFAULT_REGION
     - PORT
     - ENV
+    - API_ENDPOINT
+    - API_STAGE
   ports:
     - "8080:8080"
