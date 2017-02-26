@@ -12,11 +12,11 @@ export API_STAGE
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-12s\033[0m %s\n", $$1, $$2}'
 
-build:
-	docker-compose build
+setup: ## setup local development
+	go get -u github.com/kataras/rizla
 
-serve: build ## serve local development
-	docker-compose up
+serve: ## serve local development
+	rizla run main.go
 
 deploy: ## deploy new version to heroku
 	git push heroku master
