@@ -10,6 +10,7 @@ import (
 var env = os.Getenv("ENV")
 
 func main() {
+	iris.Get("/:user/:vellum", delivery.GetVellum)
 
 	iris.Listen(":" + os.Getenv("PORT"))
 }
